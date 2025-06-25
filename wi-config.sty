@@ -16,6 +16,12 @@
      {exercise.}
      {#5}}
 
+% no Fraktur
+
+\DeclareDocumentCommand \Struct { m }{\applytofirst{\mathbi}{#1}}
+\DeclareDocumentCommand \mModel { m }{\applytofirst{\mathbi}{#1}}
+\DeclareDocumentCommand \pAssign { m }{\applytofirst{\mathbi}{#1}}
+
 % I think I like ``countable'' and ``uncountable'' better?
 
 \settexttoken{enumerable}{countable}{countable}

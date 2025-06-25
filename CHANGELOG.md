@@ -1,4 +1,4 @@
-# Changes to _What If?_What
+# Changes to _What If?_
 
 ## Fall 2025 
 
