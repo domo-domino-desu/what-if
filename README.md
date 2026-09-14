@@ -1,5 +1,20 @@
 # What If?
 
+This fork uses the Chinese translation of the Open Logic Text as the
+`OpenLogic` submodule. Clone it with all nested assets:
+
+```sh
+git clone --recurse-submodules https://github.com/domo-domino-desu/what-if.git
+```
+
+To pick up a newer Open Logic translation, update and commit the submodule
+pointer:
+
+```sh
+git submodule update --remote --recursive OpenLogic
+git add OpenLogic
+```
+
 ![Book Cover](https://builds.openlogicproject.org/courses/what-if/wi.png)
 
 A textbook on non-classical logics based on the Open
