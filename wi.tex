@@ -4,7 +4,7 @@
 % driver file bd.tex to produce text
 
 \preto\OLEndChapterHook{\IfFileExists{include/summary-\thechapter}
-        {\section*{Summary}\addcontentsline{toc}{section}{Summary}
+        {\section*{摘要}\addcontentsline{toc}{section}{摘要}
         \let\emph\textbf\input{include/summary-\thechapter}\let\emph\textit}{}}
 
 \renewcommand*{\partnamefont}{\fontsize{22pt}{0pt}\selectfont\bfseries\sffamily}
@@ -25,11 +25,11 @@
 
 \tagfalse{FOL}
 
-\part{Remind me, how does logic work again?}\label{part:classical}
+\part{提醒一下，逻辑是怎么运作的来着？}\label{part:classical}
 
 \olimport*[propositional-logic/syntax-and-semantics]{syntax-and-semantics}
 
-\chapter{Axiomatic \usetoken{P}{derivation}}
+\chapter{公理化推导}
 
 \olimport*[first-order-logic/proof-systems]{introduction}
 \olimport*[first-order-logic/proof-systems]{axiomatic-deduction}
@@ -41,7 +41,7 @@
 
 \OLEndChapterHook
 
-\chapter{Sequent calculus}
+\chapter{相继式演算}
 
 \olimport*[first-order-logic/proof-systems]{sequent-calculus}
 \olimport*[first-order-logic/sequent-calculus]{rules-and-proofs}
@@ -53,7 +53,7 @@
 
 \OLEndChapterHook
 
-\part{Does everything have to be true or false?}
+\part{所有东西都必须为真或为假吗？}
 \label{part:many-valued}
 
 \olimport*[many-valued-logic/syntax-and-semantics]{syntax-and-semantics}
@@ -61,12 +61,12 @@
 \olimport*[many-valued-logic/sequent-calculus]{sequent-calculus}
 \olimport*[many-valued-logic/infinite-valued-logics]{infinite-valued-logics}
 
-\part{But isn't truth relative (to a world)?}
+\part{但“真”不是相对的吗（相对于世界）？}
 \label{part:modal1}
 
 \olimport*[normal-modal-logic/syntax-and-semantics]{syntax-and-semantics}
 %\olimport*[normal-modal-logic/axioms-systems]{axioms-systems}
-\olchapter{nml}{prf}{Axiomatic \usetoken{P}{derivation}}
+\olchapter{nml}{prf}{公理化推导}
 
 \olimport*[normal-modal-logic/axioms-systems]{introduction}
 \olimport*[normal-modal-logic/axioms-systems]{proofs-in-K}
@@ -78,12 +78,12 @@
 
 \olimport*[normal-modal-logic/tableaux]{tableaux}
 
-\part{Is this really necessary?}
+\part{这真的必要吗？}
 \label{part:modal2}
 
 %\olimport*[normal-modal-logic/frame-definability]{frame-definability}
 
-\olchapter{nml}{frd}{Frame Definability}
+\olchapter{nml}{frd}{框架可定义性}
 
 \olimport*[normal-modal-logic/frame-definability]{introduction}
 \olimport*[normal-modal-logic/frame-definability]{properties-accessibility}
@@ -95,7 +95,7 @@
 
 \OLEndChapterHook
 
-\olchapter{nml}{prf2}{More Axiomatic \usetoken{P}{derivation}}
+\olchapter{nml}{prf2}{更多公理化推导}
 
 \olimport*[normal-modal-logic/axioms-systems]{normal-logics}
 \olimport*[normal-modal-logic/axioms-systems]{logics-proofs}
@@ -114,37 +114,37 @@
 
 \olimport*[normal-modal-logic/sequent-calculus]{sequent-calculus}
 
-\part{But you can't tell me what to think!{}}
+\part{但你不能告诉我该怎么想！{}}
 \label{part:epistemic}
 
 \olimport*[applied-modal-logic/epistemic-logic]{epistemic-logic}
 
-\part{Is this going to go on forever?}
+\part{这难道会永远继续下去吗？}
 \label{part:temporal}
 
 \olimport*[applied-modal-logic/temporal-logic]{temporal-logic}
 
-\part{What if things were different?}
+\part{如果事情并非如此呢？}
 \label{part:counterfactuals}
 
 \olimport*[counterfactuals/introduction]{introduction}
 \olimport*[counterfactuals/minimal-change-semantics]{minimal-change-semantics}
 
-\part{How can it be true if you can't prove it?}
+\part{如果不能证明，它如何能为真？}
 \label{part:intuitionistic}
 
 \olimport*[intuitionistic-logic/introduction]{introduction}
 
 \olimport*[intuitionistic-logic/semantics]{semantics}
 
-\part{Wait, hear me out: what if it's both true and false?}
+\part{且慢，请听我一言：如果它既真又假呢？}
 \label{part:paraconsistent}
 
 %\olimport[relevant-logics/paraconsistent-logics]{paraconsistent-logics}
 
 \input{paraconsistent-logic}
 
-\part{Appendices}\label{appendices}
+\part{附录}\label{appendices}
 
 \appendix
 

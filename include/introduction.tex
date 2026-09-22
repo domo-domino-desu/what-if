@@ -1,146 +1,61 @@
 % !TeX root = ../wi-screen.tex
 
-\chapter{Introduction}
+\chapter{引言}
 
-Classical logic is very useful, widely used, has a long
-history, and is relatively simple.  But it has limitations: for
-instance, it does not (and cannot) deal well with certain locutions of
-natural language such as tense and subjunctive mood, nor with certain
-constructions such as ``Audrey knows that $p$.'' It makes certain
-assumptions, for instance that every sentence is either true or false
-and never both.  It pronounces some formulas tautologies and some
-arguments as valid, even though these tautologies and arguments
-formalize arguments in English which some do not consider true or
-valid, at least not obviously.  Thus it seems there are examples where
-classical logic is not expressive enough, or even where classical
-logic gets things wrong.
+经典逻辑非常有用，应用广泛，历史悠久，且相对简单。
+但它有局限性：例如，它不能（且不可能）很好地处理自然语言中的某些表达方式，
+如时态和虚拟语气，也无法处理某些结构，比如“Audrey 知道 $p$”。
+它做出某些假设，例如，每个语句非真即假，且绝非既真又假。
+它将某些公式判定为重言式、某些论证判定为有效，
+尽管这些重言式和论证是对英语论证的形式化，
+而有些人并不认为这些英语论证是真的或有效的——至少并非显然如此。
+因此，似乎存在这样一些例子，表明经典逻辑的表达力不够充分，甚至在某些情况下出了错。
 
-This book discusses some alternative, \emph{non-classical}
-logics. These non-classical logics are either more expressive than
-classical logic or have different tautologies or valid arguments. For
-instance, temporal logic extends classical logic by operators that
-express tense; conditional logics have an additional, different
-conditional (``if---then'') that does not suffer from the so-called
-paradoxes of the material conditional.  All of these logics
-\emph{extend} classical logic by new operators or connectives, and
-fall into the broad category of intensional logics. Other logics such
-as many-valued, intuitionistic, and paraconsistent logics have the
-same basic connectives as classical logic, but different infrences
-count as valid.  In many-valued and intutionistic logic, for instance,
-the law of excluded middle $!A \lor \lnot !A$ fails to hold; in
-paraconsistent logic the inference \emph{ex contradictione quodlibet},
-$\lfalse \Entails !A$ for arbitrary~$!A$.
+本书讨论一些替代性的、\emph{非经典}逻辑。
+这些非经典逻辑要么比经典逻辑表达力更强，要么拥有不同的重言式或有效论证。
+例如，时态逻辑通过表达时态的算子来扩展经典逻辑；
+条件句逻辑拥有一个额外的、不同的条件句（“如果……那么”），
+它不受所谓实质条件句悖论的困扰。
+所有这些逻辑都通过新的算子或联结词来\emph{扩展}经典逻辑，
+并归属于内涵逻辑这一广阔范畴。
+其他逻辑，如多值逻辑、直觉主义逻辑和次协调逻辑，则拥有与经典逻辑相同的基本联结词，
+但不同的推理被视为有效。
+例如，在多值逻辑和直觉主义逻辑中，排中律 $!A \lor \lnot !A$ 不成立；
+在次协调逻辑中，推理\emph{ex contradictione quodlibet}（矛盾推出任意命题），
+即对任意~$!A$ 有 $\lfalse \Entails !A$，也不成立。
 
-After we review the basics of classical propositional logic in
-\cref{part:classical}, we begin our discussion of non-classical logics
-in \ref{part:many-valued}. There we will relax one assumption
-classical logic makes: that everything is either true or false. There
-are good reasons to think that some sentences of English are
-neither---they have some intermediate truth value. Examples of this
-are sentences involving vagueness (``Mary is rich''), sentences the
-truth of which is not yet determined (``There will be a sea battle
-tomorrow''), and---an important case for philosopers---sentences that
-are paradoxical such as ``This sentence is false.'' One of the
-earliest non-classical logics allow truth values in addition to the
-classical ``true'' and ``false''; they are called \emph{many-valued}.
-We cover them in \cref{part:many-valued}.
+在\cref{part:classical}回顾经典命题逻辑基础之后，
+我们将在\ref{part:many-valued}开始讨论非经典逻辑。
+在那里，我们将放松经典逻辑所做的一个假设：一切非真即假。
+我们有充分理由认为，英语中的某些语句既非真也非假——它们具有某种中间真值。
+这样的例子包括涉及模糊性的语句（“Mary 很富有”），
+其真假尚未确定的语句（“明天会有海战”），
+以及——对哲学家来说很重要的——悖论性语句，如“这句话是假的”。
+最早的非经典逻辑之一允许在经典的“真”和“假”之外还有其他真值；
+它们被称为\emph{多值逻辑}。我们将在\cref{part:many-valued}讨论它们。
 
-Modal logics are extensions of classical logic by the operators $\Box$
-(``box'') and $\Diamond$ (``diamond''), which attach to !!{formula}s.
-Intuitively, $\Box$ may be read as ``necessarily'' and $\Diamond$ as
-``possibly,'' so $\Box p$ is ``$p$ is necessarily true'' and $\Diamond
-p$ is ``$p$ is possibly true.'' As necessity and possibility are
-fundamental metaphysical notions, modal logic is obviously of great
-philosophical interest. It allows the formalization of metaphysical
-principles such as ``$\Box p \lif p$'' (if $p$ is necessary, it is
-true) or ``$\Diamond p \lif \Box\Diamond p$'' (if $p$ is possible,
-it is necessarily possible).
+模态逻辑是通过算子 $\Box$（“方框”）和 $\Diamond$（“菱形”）对经典逻辑的扩展，
+这些算子附着在公式上。
+直观上，$\Box$ 可以读作“必然”，$\Diamond$ 读作“可能”，
+因此 $\Box p$ 是“$p$ 必然为真”，而 $\Diamond p$ 是“$p$ 可能为真”。
+由于必然性和可能性是根本的形而上学概念，模态逻辑显然具有重大的哲学意义。
+它使得诸如“$\Box p \lif p$”（如果 $p$ 是必然的，那么它为真）
+或“$\Diamond p \lif \Box\Diamond p$”（如果 $p$ 是可能的，那么它必然可能）
+这样的形而上学原则得以形式化。
 
-For the logic which corresponds to the interpretation of $\Box$ as
-``necessarily,'' this semantics is relatively simple: instead of
-assigning truth values to !!{propositional variable}s, an
-interpretation~$\mModel{M}$ assigns a set of ``worlds'' to
-them---intuitively, those worlds~$w$ at which $p$ is interpreted as
-true. On the basis of such an interpretation, we can define a
-satisfaction relation. The definition of this satisfaction relation
-makes $\Box !A$ satisfied at a world~$w$ iff $!A$ is satisfied at
-\emph{all} worlds: $\mSat{M}{\Box !A}[w]$ iff $\mSat{M}{!A}[v]$ for
-all worlds~$v$. This corresponds to Leibniz's idea that what's
-necessarily true is what's true in every possible world.
+对于那种将 $\Box$ 解释为“必然”的逻辑，其语义相对简单：
+不是给命题变元分配真值，而是解释~$\mModel{M}$ 给它们分配一个“世界”的集合
+——直观上，这些是 $p$ 被解释为真的世界~$w$。
+基于这样的解释，我们可以定义一个满足关系。
+这个满足关系的定义使得 $\Box !A$ 在世界~$w$ 处被满足，当且仅当 $!A$ 在\emph{所有}世界处都被满足：$\mSat{M}{\Box !A}[w]$当且仅当$\mSat{M}{!A}[v]$对所有世界~$v$成立。
+这对应着 Leibniz（莱布尼茨）的思想：必然为真的就是在所有可能世界中都为真的。
 
-``Necessarily'' is not the only way to interpret the $\Box$ operator,
-but it is the standard one---``necessarily'' and ``possibly'' are the
-so-called \emph{alethic} modalities. Other interpretations read $\Box$
-as ``it is known (by some person~$A$) that,'' as ``some person $A$
-believes that,'' ``it ought to be the case that,'' or ``it will always
-be true that.'' These are epistemic, doxastic, deontic, and temporal
-modalities, respectively. Different interpretations of $\Box$ will
-make different !!{formula}s logically true, and pronounce different
-inferences as valid. For instance, everything necessary and everything
-known is true, so $\Box !A \lif !A$ is a logical truth on the alethic
-and epistemic interpretations. By contrast, not everything believed
-nor everything that ought to be the case actually is the case, so
-$\Box !A \lif !A$ is not a logical truth on the doxastic or deontic
-interpretations. We discuss modal logics in general in
-\cref{part:modal1,part:modal2} and epistemic logics in particular in
-\cref{part:epistemic}.
+“必然”并非$\Box$算子的唯一解释方式，但它是标准解释——“必然”与“可能”即所谓的\emph{真势}模态。其他解释将$\Box$读作“（某个人~$A$）知道”、“某个人~$A$相信”、“应当如此”或“将永远为真”，这些分别是认知模态、信念模态、道义模态和时态模态。对$\Box$的不同解释会使不同的公式逻辑地为真，并判定不同的推理为有效。例如，所有必然为真的事物和所有已知为真的事物都是真的，因此$\Box !A \lif !A$在真势和认知解释下是逻辑真理。相反，并非所有被相信的事物或所有应当如此的事物实际上都如此，因此$\Box !A \lif !A$在信念或道义解释下不是逻辑真理。我们将在\cref{part:modal1,part:modal2}中一般性地讨论模态逻辑，在\cref{part:epistemic}中专门讨论认知逻辑。
 
-In order to deal with different interpretations of the modal
-operators, the semantics is extended by a relation between worlds, the
-so-called accessibility relation.  Then $\mSat{M}{\Box !A}[w]$ if
-$\mSat{M}{!A}[v]$ for all worlds~$v$ which are accessible from~$w$.
-The resulting semantics is very versatile and powerful, and the basic
-idea can be used to provide semantic interpretations for logics based
-on other intensional operators. One such logic is a close relative of
-modal logic called temporal logic. Instead of having just one modality
-$\Box$ (plus its dual $\Diamond$), it has \emph{temporal operators}
-such as ``always $P$,'' ``$p$ will be true'', etc. We study these in
-\cref{part:temporal}.
+为了处理模态算子的不同解释，语义通过一个世界间的关系——即所谓的可达关系——得到了扩展。此时，$\mSat{M}{\Box !A}[w]$，若$\mSat{M}{!A}[v]$对所有从~$w$可达的世界~$v$成立。由此产生的语义非常通用且强大，其基本思想可用于为基于其他内涵算子的逻辑提供语义解释。其中一种逻辑是模态逻辑的近亲，称为时态逻辑。它不止有一个模态算子$\Box$（加上它的对偶$\Diamond$），而是有诸如“总是$P$”、“$p$将为真”等\emph{时态算子}。我们将在\cref{part:temporal}中研究这些。
 
-Whereas the material conditional is best read as an English indicative
-conditional (``If $p$ is true then $q$ is true''), subjunctive
-conditionals are in the subjunctive mood: ``if $p$ were true then $q$
-would be true.'' While a material conditional with a false antecedent
-is true, a subjunctive conditional need not be, e.g., ``if humans had
-tails, they would be able to fly.'' In \cref{part:counterfactuals}, we
-discuss logics of counterfactual coditionals.
+实质条件句最好解读为英语的直陈条件句（“如果$p$为真，那么$q$为真”），而虚拟条件句则使用虚拟语气：“如果$p$为真，那么$q$就会为真。”一个具有假前件的实质条件句是真的，但一个虚拟条件句则未必，例如，“如果人类有尾巴，他们就能飞。”在\cref{part:counterfactuals}中，我们讨论反事实条件句的逻辑。
 
-Intuitionistic logic is a constructive logic based on L. E. J.
-Brouwer's branch of constructive mathematics. Intuitionistic logic is
-philosophically interesting for this reason---it plays an important
-role in constructive accounts of mathematics---but was also proposed
-as a logic superior to classical logic by the influential English
-philosopher Michael Dummett in the 20th century. As mentioned above,
-intuitionistic logic is non-classical because it has fewer valid
-inferences and theorems, e.g., $!A \lor \lnot !A$ and $\lnot\lnot !A
-\lif !A$ fail in general. Intuitively, this is a consequence of the
-intuitionist principle that something shouldn't count as true---you
-should not assert it---unless you have a proof of it. And
-obviously there are cases where we neither have a proof of~$!A$ nor a
-proof of~$\lnot !A$. Intuitionistic logic can be given a relational
-semantics very much like modal logic. We discuss it in
-\cref{part:intuitionistic}.
+直觉主义逻辑是一种基于 L. E. J. Brouwer（布劳威尔）的构造性数学分支的构造性逻辑。直觉主义逻辑因此具有哲学趣味——它在数学的构造性解释中扮演着重要角色——但也曾被二十世纪有影响力的英国哲学家 Michael Dummett（达米特）提出作为优于经典逻辑的逻辑。如上所述，直觉主义逻辑是非经典的，因为它有更少的有效推理和定理，例如，$!A \lor \lnot !A$ 和 $\lnot\lnot !A \lif !A$ 一般不成立。直观上，这是直觉主义原则的结果：除非你拥有某个东西的证明，否则它就不应算作真——你不应断言它。显然，存在我们既没有$!A$的证明也没有$\lnot !A$的证明的情况。直觉主义逻辑可以给出一种非常类似于模态逻辑的关系语义。我们将在\cref{part:intuitionistic}中讨论它。
 
-One of the weirdest features of classical logic is the principle of
-explosion: from a contradiction, anything follows. This principle
-flows from the way we set up the semantics of classical logic, but it
-is \emph{very} counterintuitive and goes against what we actually do
-when we reason. After all, once you discover that some things you
-believe are contradictory, you don't (usually) go on to conclude
-arbitrary claims since they follow from your beliefs!{} This has led
-logicians to develop systems of logic in which the inference \emph{ex
-contradictione, quodlibet} is blocked. Some of these are simply
-further weakenings of classical logic, designed just to get rid of
-explosion. Some are more philosophically motivated. Part of what makes
-the principle of explosion weird is that when it pronounces that $!A$
-and $\lnot !A$ together entail $!B$, there is no connection at all
-between the premises and the conclusion.  And shouldn't there be such
-a connection in any valid argument? Shouldn't the premises be
-\emph{relevant} to the conclusion?  This leads to so-valled
-\emph{relevant} (or \emph{relevance}) logic. Another motivation is the
-philosophical position called \emph{dialetheism:} the belief that
-there can be true contradictions.  (If you believe that contradictions
-can be true, then you would not want them to entail anything
-whatsoever, e.g., something false.) All of these logic fall under the
-umbrella term \emph{paraconsistent}. We discuss paraconsistent logics
-in \cref{part:paraconsistent}.
+经典逻辑最奇怪的特征之一是爆炸原理：从矛盾可以推出任何结论。这一原理源于我们设定经典逻辑语义的方式，但它\emph{非常}反直觉，并且违背了我们实际推理时的做法。毕竟，一旦你发现你相信的某些东西是矛盾的，你（通常）不会进而推断出任意主张，因为它们可以从你的信念中推出！这促使逻辑学家发展了一些逻辑系统，在这些系统中，\emph{ex contradictione, quodlibet}这一推理被阻断。其中一些仅仅是经典逻辑的进一步弱化，只是为了摆脱爆炸原理。另一些则更有哲学动机。爆炸原理之所以奇怪，部分原因是当它断定$!A$和$\lnot !A$一起后承$!B$时，前提和结论之间完全没有联系。难道在任何有效论证中不应该有这样的联系吗？前提难道不应该与结论\emph{相关}吗？这就引出了所谓的\emph{相干}（或\emph{相关}）逻辑。另一个动机是一种称为\emph{矛盾真理论}的哲学立场：相信可能存在真矛盾。（如果你相信矛盾可以为真，那么你大概不会希望它们后承任何东西，比如假命题。）所有这些逻辑都属于\emph{次协调逻辑}这一总称。我们将在\cref{part:paraconsistent}中讨论次协调逻辑。
