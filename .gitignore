@@ -138,3 +138,6 @@ sympy-plots-for-*.tex/
 *.css
 pdfa.xmpi
 olprevision.tex
+
+# pdfx
+*.xmpi

@@ -15,6 +15,13 @@ git submodule update --remote --recursive OpenLogic
 git add OpenLogic
 ```
 
+The Chinese edition needs LuaLaTeX (the text is typeset with `ctex` and
+New Computer Modern), so build it with `make`, which runs
+`latexmk -lualatex`, rather than with `pdflatex`. Every push to
+`master` builds `wi-screen.pdf`, `wi-print.pdf` and
+`wi-print-cover.pdf` in GitHub Actions and attaches them to a
+[release](https://github.com/domo-domino-desu/what-if/releases).
+
 ![Book Cover](https://builds.openlogicproject.org/courses/what-if/wi.png)
 
 A textbook on non-classical logics based on the Open

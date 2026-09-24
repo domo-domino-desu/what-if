@@ -1,8 +1,8 @@
-\Title{What If? An Open Introduction to Non-classical Logics}
+\Title{假若？非经典逻辑开放导论}
 \Author{Audrey Yap\sep Richard Zach\sep Open Logic Project}
-\Language{en-US}
-\Keywords{logic\sep modality\sep intuitionistic logic\sep
-counterfactuals\sep many-valued logic\sep paraconsistent logic}
+\Language{zh-CN}
+\Keywords{逻辑\sep 模态\sep 直觉主义逻辑\sep
+反事实条件句\sep 多值逻辑\sep 次协调逻辑}
 \Copyright{CC BY 4.0}
 \PublicationType{book}
 \URLlink{https://github.com/rzach/what-if}
